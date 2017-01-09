@@ -5,7 +5,6 @@ global.$ = {
   config: require('./gulp/config'),
   path: {
     task: require('./gulp/paths/tasks.js'),
-    jsFoundation: require('./gulp/paths/js.foundation.js'),
     cssFoundation: require('./gulp/paths/css.foundation.js'),
     app: require('./gulp/paths/app.js')
   },
@@ -24,7 +23,6 @@ $.gulp.task('default', $.gulp.series(
   $.gulp.parallel(
     'sass',
     'pug',
-    'js:foundation',
     'js:process',
     'copy:image',
     'css:foundation',
